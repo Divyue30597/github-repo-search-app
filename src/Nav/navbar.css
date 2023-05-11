@@ -1,0 +1,51 @@
+.navbar {
+  margin: 16px 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul li:first-child {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar form input {
+  margin-right: 14px;
+  padding: 12px;
+  width: 248px;
+}
+
+.navbar form button[type="submit"] {
+  all: unset;
+  background-color: #0079fe;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.blink {
+  animation: blink-animation 1.2s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
