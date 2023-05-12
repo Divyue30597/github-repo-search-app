@@ -30,6 +30,7 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [metaData, setMetaData] = useState<TMetaData>();
+  const [error, setError] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -53,6 +54,7 @@ function App() {
         setMetaData(response.data);
       })
       .catch((error) => {
+        setError(error);
         console.log(error);
       })
       .finally(() => {
@@ -66,14 +68,27 @@ function App() {
     <>
       <Navbar data={data} setData={setData} />
       <hr />
-      {isLoading && <div>Loading...</div>}
-      {!isLoading && <Card metaData={metaData} />}
-      <Paginate data={data} setData={setData} />
+      {isLoading && (
+        <div
+          style={{ marginBottom: "24px", textAlign: "center", fontWeight: 700 }}
+        >
+          Loading...
+        </div>
+      )}
+      {!isLoading && !error && <Card metaData={metaData} />}
+      {!error && <Paginate metaData={metaData} data={data} setData={setData} />}
+      {error && (
+        <p
+          style={{ marginBottom: "24px", textAlign: "center", fontWeight: 700 }}
+        >
+          There was an error. Please try again later.
+        </p>
+      )}
       <hr />
       <footer className="footer">
         <p>
-          Created by{" "}
-          <strong>
+          Created by:{" "}
+          <strong className="first-link">
             <a target="_blank" href="https://github.com/Divyue30597">
               Divyue30597
             </a>
@@ -81,7 +96,7 @@ function App() {
         </p>
         <p>
           Repo link:{" "}
-          <strong>
+          <strong className="last-link">
             <a
               target="_blank"
               href="https://github.com/Divyue30597/github-repo-search-app"

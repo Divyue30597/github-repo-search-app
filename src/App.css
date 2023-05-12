@@ -8,27 +8,31 @@ footer {
 }
 
 .card-body-header-info h1 a,
-.footer strong a:nth-child(1) {
+.footer .first-link a {
   color: #fe5000;
+  text-decoration-thickness: 2px;
   text-decoration-style: double;
 }
 
 .card-body-header-info h1 a:hover,
-.footer strong a:nth-child(1):hover {
+.footer .first-link a:hover {
   color: #bd3c01;
   text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
   transition: 400ms;
 }
 
 .card-body-header-info h3 a,
-.footer strong a:nth-child(2) {
+.footer .last-link a {
   color: #0079fe;
   text-decoration-style: double;
+  text-decoration-thickness: 2px;
 }
 
 .card-body-header-info h3 a:hover,
-.footer strong a:nth-child(2):hover {
+.footer .last-link a:hover {
   color: #0259b6;
   text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
   transition: 400ms;
 }

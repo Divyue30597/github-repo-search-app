@@ -6,8 +6,7 @@ import "./card.css";
 export function Card({ metaData }: any) {
   return (
     <section className="card">
-      {metaData?.total_count >= 1 &&
-        metaData?.items?.length >= 1 &&
+      {metaData?.total_count >= 1 && metaData?.items?.length >= 1 ? (
         metaData?.items?.map((item: any) => {
           return (
             <div key={item.id} className="card-body">
@@ -74,7 +73,21 @@ export function Card({ metaData }: any) {
               </div>
             </div>
           );
-        })}
+        })
+      ) : (
+        <div className="no-repo">
+          <p
+            style={{
+              marginBottom: "24px",
+              textAlign: "center",
+              fontWeight: 700,
+            }}
+          >
+            There was no repository with this name found. Please try with some
+            other repository name.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

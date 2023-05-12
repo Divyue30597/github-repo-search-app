@@ -1,10 +1,12 @@
-import { TUrlData } from "../App";
+import { TMetaData, TUrlData } from "../App";
 import "./paginate.css";
 
 export function Paginate({
+  metaData,
   data,
   setData,
 }: {
+  metaData: TMetaData;
   data: TUrlData;
   setData: React.Dispatch<React.SetStateAction<TUrlData>>;
 }) {
@@ -26,7 +28,9 @@ export function Paginate({
         ➜
       </button>
       <strong>{data.page}</strong>
-      <button onClick={() => nextPage()}>➜</button>
+      <button disabled={metaData.items.length === 0} onClick={() => nextPage()}>
+        ➜
+      </button>
     </section>
   );
 }
