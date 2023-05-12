@@ -1,5 +1,6 @@
 .navbar {
   margin: 16px 0;
+  position: sticky;
 }
 
 .navbar ul {
@@ -20,7 +21,17 @@
 .navbar form input {
   margin-right: 14px;
   padding: 12px;
-  width: 248px;
+}
+
+.navbar form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-buttons {
+  margin-right: 24px;
+  text-align: center;
 }
 
 .navbar form button[type="submit"] {
@@ -31,6 +42,7 @@
   font-size: 16px;
   padding: 12px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .blink {

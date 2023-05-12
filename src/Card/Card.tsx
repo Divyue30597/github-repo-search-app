@@ -4,10 +4,10 @@ import data from "../../sample-data.json";
 
 // Avatar, Repo name, Stars, Description, language
 
-export function Card() {
+export function Card({ metaData }) {
   return (
     <section className="card">
-      {data.items.map((item) => {
+      {metaData?.items?.map((item) => {
         return (
           <div key={item.id} className="card-body">
             <div className="card-body-image">
