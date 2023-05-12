@@ -17,7 +17,7 @@ function App() {
     repoInput: "node",
     sort: "stars",
     order: "desc",
-    per_page: 30,
+    per_page: 5,
     page: 1,
   });
 

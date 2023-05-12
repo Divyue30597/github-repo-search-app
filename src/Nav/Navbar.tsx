@@ -8,12 +8,20 @@ interface RepoInput {
 }
 
 export function Navbar({ data, setData }: RepoInput) {
-  const [repoName, setRepoName] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
+  const [repoName, setRepoName] = useState("node");
+  const [selectedOption, setSelectedOption] = useState("desc");
+  const [dropdownSelect, setDropdownSelect] = useState("forks");
+  const [perPageVal, setperPageVal] = useState(5);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setData({ ...data, repoInput: repoName, order: selectedOption });
+  function handleSubmit(event: any) {
+    event.preventDefault();
+    setData({
+      ...data,
+      repoInput: repoName,
+      order: selectedOption,
+      sort: dropdownSelect,
+      per_page: perPageVal,
+    });
   }
 
   return (
@@ -24,6 +32,39 @@ export function Navbar({ data, setData }: RepoInput) {
         </li>
         <li>
           <form onSubmit={handleSubmit}>
+            <div className="per-page">
+              <label htmlFor="perPage" style={{ marginBottom: "4px" }}>
+                <strong>Per page: </strong>
+              </label>
+              <select
+                name="perPage"
+                id="perPage"
+                onChange={(e) => {
+                  setperPageVal(Number(e.target.value));
+                }}
+              >
+                <option value={5}>5</option>
+                <option value={15}>15</option>
+                <option value={30}>30</option>
+              </select>
+            </div>
+            <div className="select-options">
+              <label htmlFor="sort" style={{ marginBottom: "4px" }}>
+                <strong>Sort by:</strong>
+              </label>
+              <select
+                name="sort"
+                id="sort"
+                onChange={(e) => {
+                  setDropdownSelect(e.target.value);
+                }}
+              >
+                <option value="stars">Stars</option>
+                <option value="forks">Forks</option>
+                <option value="help-wanted-issues">Help Wanted Issues</option>
+                <option value="update">Last updated</option>
+              </select>
+            </div>
             <div className="radio-buttons">
               <p>
                 <strong>Order By: </strong>

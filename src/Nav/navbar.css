@@ -34,6 +34,22 @@
   text-align: center;
 }
 
+.select-options,
+.per-page {
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  padding: 4px;
+  background-color: #fff;
+  border: 2px solid #393e46;
+  border-radius: 8px;
+  width: 100%;
+}
+
 .navbar form button[type="submit"] {
   all: unset;
   background-color: #0079fe;

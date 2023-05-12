@@ -1,13 +1,12 @@
 import moment from "moment";
 import "./card.css";
-import data from "../../sample-data.json";
 
 // Avatar, Repo name, Stars, Description, language
 
-export function Card({ metaData }) {
+export function Card({ metaData }: any) {
   return (
     <section className="card">
-      {metaData?.items?.map((item) => {
+      {metaData?.items?.map((item: any) => {
         return (
           <div key={item.id} className="card-body">
             <div className="card-body-image">
@@ -36,6 +35,10 @@ export function Card({ metaData }) {
                   ? moment(item.created_at).format("LL")
                   : item.created_at}
               </p>
+              <p>
+                <strong>Forks Count: </strong>
+                {item?.forks_count}
+              </p>
             </div>
             <div className="card-body-detailed-info">
               <p className="description">
@@ -55,6 +58,12 @@ export function Card({ metaData }) {
                     ? `${item.stargazers_count} ⭐'s`
                     : `${item.stargazers_count} ⭐`
                   : "No stars"}
+              </p>
+              <p>
+                <strong>Last Updated: </strong>
+                {item?.updated_at
+                  ? moment(item.updated_at).format("LL")
+                  : item.created_at}
               </p>
             </div>
           </div>
