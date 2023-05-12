@@ -69,7 +69,7 @@ export function Navbar({ data, setData }: RepoInput) {
               </select>
             </div>
             <div className="radio-buttons">
-              <p>
+              <p style={{ marginBottom: "8px" }}>
                 <strong>Order By: </strong>
               </p>
               <label htmlFor="asc">
