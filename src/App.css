@@ -1,3 +1,34 @@
 hr {
   margin-bottom: 24px;
 }
+
+footer {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card-body-header-info h1 a,
+.footer strong a:nth-child(1) {
+  color: #fe5000;
+  text-decoration-style: double;
+}
+
+.card-body-header-info h1 a:hover,
+.footer strong a:nth-child(1):hover {
+  color: #bd3c01;
+  text-decoration-style: wavy;
+  transition: 400ms;
+}
+
+.card-body-header-info h3 a,
+.footer strong a:nth-child(2) {
+  color: #0079fe;
+  text-decoration-style: double;
+}
+
+.card-body-header-info h3 a:hover,
+.footer strong a:nth-child(2):hover {
+  color: #0259b6;
+  text-decoration-style: wavy;
+  transition: 400ms;
+}

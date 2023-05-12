@@ -8,6 +8,8 @@
 }
 
 body {
+  --primary-color: #fe5000;
+  --secondary-color: #0079fe;
   background-color: #f6f1f1;
 }
 

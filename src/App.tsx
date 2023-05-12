@@ -3,8 +3,15 @@ import "./App.css";
 import { Card } from "./Card/Card";
 import { Navbar } from "./Nav/Navbar";
 import axios from "axios";
+import { Paginate } from "./Paginate/Paginate";
 
-export type urlData = {
+export type TMetaData = {
+  total_count: number;
+  incomplete_results: boolean;
+  items: Array<any>;
+};
+
+export type TUrlData = {
   repoInput: string;
   sort: string;
   order: string;
@@ -13,7 +20,7 @@ export type urlData = {
 };
 
 function App() {
-  const [data, setData] = useState<urlData>({
+  const [data, setData] = useState<TUrlData>({
     repoInput: "node",
     sort: "stars",
     order: "desc",
@@ -22,7 +29,7 @@ function App() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
-  const [metaData, setMetaData] = useState({});
+  const [metaData, setMetaData] = useState<TMetaData>();
 
   useEffect(() => {
     setIsLoading(true);
@@ -61,6 +68,29 @@ function App() {
       <hr />
       {isLoading && <div>Loading...</div>}
       {!isLoading && <Card metaData={metaData} />}
+      <Paginate data={data} setData={setData} />
+      <hr />
+      <footer className="footer">
+        <p>
+          Created by{" "}
+          <strong>
+            <a target="_blank" href="https://github.com/Divyue30597">
+              Divyue30597
+            </a>
+          </strong>
+        </p>
+        <p>
+          Repo link:{" "}
+          <strong>
+            <a
+              target="_blank"
+              href="https://github.com/Divyue30597/github-repo-search-app"
+            >
+              repofinder_
+            </a>
+          </strong>
+        </p>
+      </footer>
     </>
   );
 }

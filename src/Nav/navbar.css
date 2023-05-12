@@ -1,5 +1,5 @@
 .navbar {
-  margin: 16px 0;
+  margin: 24px 0;
   position: sticky;
 }
 
@@ -16,6 +16,7 @@
 
 .navbar ul li {
   list-style: none;
+  cursor: pointer;
 }
 
 .navbar form input {
@@ -59,6 +60,18 @@ select {
   padding: 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.navbar form button[type="submit"]:hover {
+  all: unset;
+  background-color: #0259b6;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 400ms;
 }
 
 .blink {

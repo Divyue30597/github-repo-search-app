@@ -1,0 +1,49 @@
+.paginate {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.paginate button {
+  all: unset;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.paginate button:first-child {
+  margin-right: 16px;
+  background-color: #0079fe;
+  rotate: 180deg;
+  font-size: 24px;
+}
+
+.paginate button:last-child {
+  margin-left: 16px;
+  background-color: #fe5000;
+  font-size: 24px;
+}
+
+.paginate button:first-child:hover {
+  margin-right: 16px;
+  background-color: #0259b6;
+  transition: 400ms;
+}
+
+.paginate button:first-child:disabled {
+  margin-right: 16px;
+  background-color: #003369;
+  cursor: none;
+}
+
+.paginate button:last-child:hover {
+  margin-left: 16px;
+  background-color: #bd3c01;
+  transition: 400ms;
+}
+
+.paginate button:last-child:disabled {
+  margin-right: 16px;
+  background-color: #8a2c00;
+  cursor: none;
+}

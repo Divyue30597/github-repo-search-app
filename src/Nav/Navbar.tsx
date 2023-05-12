@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { urlData } from "../App";
+import { TUrlData } from "../App";
 import "./navbar.css";
 
 interface RepoInput {
-  data: urlData;
-  setData: React.Dispatch<React.SetStateAction<urlData>>;
+  data: TUrlData;
+  setData: React.Dispatch<React.SetStateAction<TUrlData>>;
 }
 
 export function Navbar({ data, setData }: RepoInput) {
@@ -28,7 +28,8 @@ export function Navbar({ data, setData }: RepoInput) {
     <nav className="navbar">
       <ul>
         <li>
-          repofinder<span className="blink">_</span>
+          repofinder
+          <span className="blink">_</span>
         </li>
         <li>
           <form onSubmit={handleSubmit}>
@@ -46,6 +47,8 @@ export function Navbar({ data, setData }: RepoInput) {
                 <option value={5}>5</option>
                 <option value={15}>15</option>
                 <option value={30}>30</option>
+                <option value={50}>50</option>
+                <option value={100}>100</option>
               </select>
             </div>
             <div className="select-options">
