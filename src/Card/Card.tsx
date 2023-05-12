@@ -1,9 +1,10 @@
 import moment from "moment";
 import "./card.css";
+import { TMetaData } from "../App";
 
 // Avatar, Repo name, Stars, Description, language
 
-export function Card({ metaData }: any) {
+export function Card({ metaData }: TMetaData | any) {
   return (
     <section className="card">
       {metaData?.total_count >= 1 && metaData?.items?.length >= 1 ? (

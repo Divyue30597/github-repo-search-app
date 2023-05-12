@@ -6,7 +6,7 @@ export function Paginate({
   data,
   setData,
 }: {
-  metaData: TMetaData;
+  metaData: TMetaData | any;
   data: TUrlData;
   setData: React.Dispatch<React.SetStateAction<TUrlData>>;
 }) {
@@ -28,7 +28,10 @@ export function Paginate({
         ➜
       </button>
       <strong>{data.page}</strong>
-      <button disabled={metaData.items.length === 0} onClick={() => nextPage()}>
+      <button
+        disabled={metaData?.items?.length === 0}
+        onClick={() => nextPage()}
+      >
         ➜
       </button>
     </section>
