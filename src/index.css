@@ -20,10 +20,6 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 622px) {
-  body {
-    background-color: red;
-  }
-
   #root {
     margin: 0 12px;
   }
@@ -51,8 +47,8 @@ body {
     justify-content: space-evenly;
   }
 
-  .form-input-2 input[type="text" ] {
-    width:100% ;
+  .form-input-2 input[type="text"] {
+    width: 100%;
   }
 
   .card {
@@ -82,14 +78,14 @@ body {
   .radio-buttons {
     margin-right: 8px;
   }
+
+  .paginate {
+    justify-content: space-between;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: green;
-  }
-
   #root {
     margin: 0 12px;
   }
@@ -131,10 +127,6 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  body {
-    background-color: blue;
-  }
-
   #root {
     margin: 0 12px;
   }
@@ -174,10 +166,6 @@ body {
     justify-content: space-between;
   }
 
-  body {
-    background-color: orange;
-  }
-
   .navbar ul {
     flex-direction: row;
     justify-content: space-between;
@@ -208,10 +196,6 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  body {
-    background-color: pink;
-  }
-
   #root {
     margin: auto;
   }

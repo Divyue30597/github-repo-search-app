@@ -53,28 +53,24 @@ export function Navbar({ data, setData }: RepoInput) {
                 <p style={{ marginBottom: "8px" }}>
                   <strong>Order By: </strong>
                 </p>
-                <label htmlFor="asc">
-                  <input
-                    type="radio"
-                    name="asc"
-                    id="asc"
-                    value="asc"
-                    checked={selectedOption === "asc"}
-                    onChange={(e) => setSelectedOption(e.target.value)}
-                  />
-                  Asc
-                </label>{" "}
-                <label htmlFor="desc">
-                  <input
-                    type="radio"
-                    name="desc"
-                    id="desc"
-                    value="desc"
-                    checked={selectedOption === "desc"}
-                    onChange={(e) => setSelectedOption(e.target.value)}
-                  />
-                  Desc
-                </label>
+                <input
+                  type="radio"
+                  name="asc"
+                  id="asc"
+                  value="asc"
+                  checked={selectedOption === "asc"}
+                  onChange={(e) => setSelectedOption(e.target.value)}
+                />
+                <label htmlFor="asc"> Asc</label>{" "}
+                <input
+                  type="radio"
+                  name="desc"
+                  id="desc"
+                  value="desc"
+                  checked={selectedOption === "desc"}
+                  onChange={(e) => setSelectedOption(e.target.value)}
+                />
+                <label htmlFor="desc"> Desc</label>
               </div>
             </div>
             <div className="form-input-2">

@@ -7,14 +7,14 @@ footer {
   margin-bottom: 24px;
 }
 
-.card-body-header-info h1 a,
+.card-body-header h1 a,
 .footer .first-link a {
   color: #fe5000;
   text-decoration-thickness: 2px;
   text-decoration-style: double;
 }
 
-.card-body-header-info h1 a:hover,
+.card-body-header h1 a:hover,
 .footer .first-link a:hover {
   color: #bd3c01;
   text-decoration-style: wavy;
@@ -22,14 +22,14 @@ footer {
   transition: 400ms;
 }
 
-.card-body-header-info h3 a,
+.card-body-header h3 a,
 .footer .last-link a {
   color: #0079fe;
   text-decoration-style: double;
   text-decoration-thickness: 2px;
 }
 
-.card-body-header-info h3 a:hover,
+.card-body-header h3 a:hover,
 .footer .last-link a:hover {
   color: #0259b6;
   text-decoration-style: wavy;
