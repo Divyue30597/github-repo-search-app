@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TMetaData, TUrlData } from "../App";
 import "./paginate.css";
 
