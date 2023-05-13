@@ -26,7 +26,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-			repo-taken: ${{ secrets.VITE_GITHUB_TOKEN }}
+      repo-token: ${{ secrets.VITE_GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
