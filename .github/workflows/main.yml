@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy github repofinder_
+name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -26,7 +26,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      repo-token: ${{ secrets.VITE_GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,6 +39,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
