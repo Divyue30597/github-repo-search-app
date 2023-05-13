@@ -21,10 +21,10 @@ export type TUrlData = {
 
 function App() {
   const [data, setData] = useState<TUrlData>({
-    repoInput: "node",
+    repoInput: "html",
     sort: "stars",
     order: "desc",
-    per_page: 5,
+    per_page: 6,
     page: 1,
   });
 

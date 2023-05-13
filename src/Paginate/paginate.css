@@ -1,6 +1,8 @@
 .paginate {
+  display: flex;
   margin-bottom: 24px;
-  text-align: center;
+  align-items: center;
+  justify-content: end;
 }
 
 .paginate button {
