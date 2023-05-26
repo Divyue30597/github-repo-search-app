@@ -1,0 +1,17 @@
+dialog {
+  border: none;
+  padding: 24px;
+  border-radius: 12px;
+  margin: calc(100vh / 3) auto;
+  width: 50%;
+}
+
+dialog::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

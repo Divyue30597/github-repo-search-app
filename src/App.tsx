@@ -5,6 +5,7 @@ import { Navbar } from "./Nav/Navbar";
 import axios from "axios";
 import { Paginate } from "./Paginate/Paginate";
 
+
 export type TMetaData = {
   total_count: number;
   incomplete_results: boolean;
