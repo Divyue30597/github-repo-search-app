@@ -45,14 +45,17 @@ export function Card({ metaData }: TMetaData | any) {
                         </a>
                       </h1>
                       <h3>
-                        <button
+                        <a
                           onClick={() => {
                             setSelectedData(item);
                             setIsActive(!isActive);
                           }}
+                          style={{
+                            cursor: "pointer",
+                          }}
                         >
                           @{item.owner.login}
-                        </button>
+                        </a>
                       </h3>
                     </div>
                   </div>

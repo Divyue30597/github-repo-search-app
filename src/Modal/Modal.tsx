@@ -12,7 +12,7 @@ export function Modal({
   selectedData: { name: string; description: string };
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const dialogRef = useRef(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -21,7 +21,9 @@ export function Modal({
         dialog.showModal();
       }
     }
-    return () => dialog.close();
+    return () => {
+      if (dialog) dialog.close();
+    };
   }, [isActive]);
 
   return (
